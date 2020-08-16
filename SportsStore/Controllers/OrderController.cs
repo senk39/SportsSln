@@ -30,7 +30,7 @@ namespace SportsStore.Controllers
                 order.Lines = cart.Lines.ToArray();
                 repository.SaveOrder(order);
                 cart.Clear();
-                return RedirectToPage("/Complated", new { orderID = order.OrderID });
+                return RedirectToPage("/Completed", new { orderID = order.OrderID });
             }
             else
             {
