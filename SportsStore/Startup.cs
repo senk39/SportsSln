@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using SportsStore.Models;
 using Microsoft.AspNetCore.Identity;
+using SportsStore.Model;
 
 namespace SportsStore
 {
@@ -78,6 +79,7 @@ namespace SportsStore
                 endpoints.MapFallbackToPage("/admin/{*catchall}", "/Admin/Index");
             });
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }
